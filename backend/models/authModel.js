@@ -1,7 +1,7 @@
 //import mongodb
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
-const uri = "mongodb+srv://test:12345@vishalcluster.zjn2blt.mongodb.net/?retryWrites=true&w=majority";
+const uri = "your uri";
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 client.connect().then(() => {
@@ -10,7 +10,7 @@ client.connect().then(() => {
     console.log("Error connecting to MongoDB", err);
 });
 
-const collection = client.db("testing").collection("users");
+const collection = client.db("db name").collection("collection name");
 //register a new user in the mongo database
 const register = async (data) => {
     console.log("registering");
